@@ -14,10 +14,12 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     overflow-y: scroll;
+    overflow-x:hidden;
 }
 html, body {
     padding: 0;
     margin: 0;
+    overflow-x:hidden !important;
 }
 a:focus, a:hover, a:active {
     outline: 0 !important;
@@ -206,7 +208,6 @@ hr {
 
 .left-col {
 	background: rgb(246, 246, 246);
-	padding-top: 45px;
 	margin-top: -50px;
 	padding-bottom: 29%;
 }
@@ -299,6 +300,8 @@ hr {
 
 .list {
 	left: -8px;
+	height: 837px;
+	overflow: hidden;
 }
 
 iframe{
@@ -326,6 +329,7 @@ iframe{
   height: 780px;
   background-color: rgba(0,0,0,0) !important;
   margin-bottom:0px !important;
+  position: relative;
 }
 
 .jumbotron img {
@@ -372,6 +376,10 @@ iframe{
 	max-width: 109% !important;
 }
 
+.no-padding {
+	padding-right: 0px; 
+	padding-left: 0px;
+}
 
 .grid {
 	list-style: none;
@@ -384,7 +392,7 @@ iframe{
 	position: relative;
 	float: left;
 	overflow: hidden;
-	width: 111%;
+	width: 100%;
 	background: #3085a3;
 	text-align: center;
 	cursor: pointer;
