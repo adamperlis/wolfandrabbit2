@@ -21,10 +21,6 @@ html, body {
     margin: 0;
     overflow-x:hidden !important;
 }
-a:focus, a:hover, a:active {
-    outline: 0 !important;
-    color:white !important;
-}
 
 a {
 	text-decoration: none !important;
@@ -145,12 +141,37 @@ hr {
 .navbar-brand img{
 	height: 35px;
 	position: relative;
-	top: -9px;
+	top: -9px;subh
 }
 
 .navbar-inverse {
-	border-bottom: 1px solid #DBDBDB;
-	background: white;
+	border-bottom: none;
+	background: none;
+}
+
+.navbar-toggle {
+	position: relative;
+	float: right;
+	padding: 9px 10px;
+	margin-top: 8px;
+	margin-right: 15px;
+	margin-bottom: 8px;
+	background-color: transparent;
+	background-image: none;
+	border: none; 
+	border-radius: 0px; 
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: lightgray !important;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+border-color: transparent;
 }
 
 .container{
@@ -305,8 +326,8 @@ hr {
 }
 
 iframe{
-	width: 360px;
-	height: 200px;
+	width: 600px;
+	height: 340px;
 }
 
 .bg {
@@ -372,6 +393,24 @@ iframe{
 	text-transform: uppercase;
 }
 
+.nav-menu-items {
+	font-family: "Montserrat",Verdana,sans-serif;
+	font-size: 9px;
+	line-height: 1.2;
+	letter-spacing: 2px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color:white;
+}
+
+.nav-menu-items li a {
+	color:white;
+}
+
+.nav-menu-items li a:hover {
+	color:lightgray;
+}
+
 .bigger {
 	max-width: 109% !important;
 }
@@ -387,13 +426,17 @@ iframe{
   font-family: 'montserrat';
 }
 
+.library-sections p{
+	color:lightgray;
+}
+
 /* Common style */
 .grid figure {
 	position: relative;
 	float: left;
 	overflow: hidden;
 	width: 100%;
-	background: #3085a3;
+	background: none;
 	text-align: center;
 	cursor: pointer;
 }
@@ -496,6 +539,14 @@ figure.effect-romeo figcaption::after {
 	transform: translate3d(-50%,-50%,0);
 }
 
+figure.effect-romeo figcaption::before {
+	opacity: 0;
+}
+
+figure.effect-romeo figcaption {
+	opacity: 0;
+}
+
 figure.effect-romeo:hover figcaption::before {
 	opacity: 0.5;
 	-webkit-transform: translate3d(-50%,-50%,0) rotate(45deg);
@@ -539,11 +590,66 @@ figure.effect-romeo:hover p {
 	transform: translate3d(0,-50%,0) translate3d(0,100%,0);
 }
 
+.navbar-toggle .icon-bar:nth-of-type(2) {
+	  top: 1px;
+}
 
+.navbar-toggle .icon-bar:nth-of-type(3) {
+  	top: 2px;
+}
 
+.navbar-toggle .icon-bar {
+	  position: relative;
+	  transition: all 500ms ease-in-out;
+}
 
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+	  top: 6px;
+	  transform: rotate(45deg);
+}
 
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+	  background-color: transparent;
+}
 
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+	  top: -6px;
+	  transform: rotate(-45deg);
+}
+
+.navbar-inverse .navbar-toggle {
+	transition: all .7s;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+	color: white;
+	background:none;
+	transform: scale(1.25);
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.active>a {
+	background-image: none;
+	background-image: none;
+	background-image: none);
+	background-image: none;
+	filter: none;
+	background-repeat: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.navbar-nav>.active>a {
+color: #fff;
+background-color: rgba(0,0,0,0) !important;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
+text-shadow: none;
+}
+
+.navbar-nav>.active>a:focus{
+	color:black;
+}
 
 
 
