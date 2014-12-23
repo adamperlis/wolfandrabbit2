@@ -429,19 +429,21 @@ border-color: transparent;
 	padding-left: 30px;
 	padding-right: 30px;
 	-webkit-transition: all 1s;
-	transition: all 1s;
+	transition: all .5s;
 	background: rgb(233, 233, 233);
 	padding-top: 10px;
 	padding-bottom: 10px;
+	background-position:-100px -100px;
 	-webkit-user-select: none; /* Chrome/Safari */        
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+ */
 }
 
 #pButton:hover{
+	background-position:0 0;
 	color:white;
 	cursor: pointer;
-	background-color: rgb(187, 82, 239);
+	background-color: #eb52ff;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzEwJyB2aWV3Qm94PScwIDAgNSAxMCc+Cgk8cGF0aCBkPSdNMCwwbDUsNWwtNSw1bS0xLC02bDEsMWwtMSwxTTQsLTFsNiw2bC02LDYnIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjYjYxZWM3JyBzdHJva2Utd2lkdGg9JzEuMTMnLz4KPC9zdmc+');
 }
 
 #pButton p {
@@ -454,7 +456,6 @@ border-color: transparent;
 .play:before {
 	content: "\25B6";
 	font-style: normal;
-
 }
 
 .pause:before {
@@ -515,10 +516,11 @@ border-color: transparent;
 	padding-left: 30px;
 	padding-right: 30px;
 	-webkit-transition: all 1s;
-	transition: all 1s;
+	transition: all .5s;
 	background: rgb(233, 233, 233);
 	padding-top: 10px;
 	padding-bottom: 10px;
+	background-position:-100px -100px;
 	-webkit-user-select: none; /* Chrome/Safari */        
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+ */
@@ -527,7 +529,8 @@ border-color: transparent;
 .player i:hover{
 	color:white;
 	cursor: pointer;
-	background-color: rgb(187, 82, 239);
+	background-position:0px 0px;
+	background-color: #eb52ff;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzEwJyB2aWV3Qm94PScwIDAgNSAxMCc+Cgk8cGF0aCBkPSdNMCwwbDUsNWwtNSw1bS0xLC02bDEsMWwtMSwxTTQsLTFsNiw2bC02LDYnIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjYjYxZWM3JyBzdHJva2Utd2lkdGg9JzEuMTMnLz4KPC9zdmc+');
 	-webkit-user-select: none; /* Chrome/Safari */        
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+ */
@@ -591,7 +594,7 @@ iframe{
 	left: 0;
 	z-index: -1;
 	background-size: 1440px;
-	background-position: 0 51px;
+	background-position: 0 0px;
 	background-size: cover;
 	-ms-transform: scale(1.25); /* IE 9 */
     -webkit-transform: scale(1.25); /* Chrome, Safari, Opera */
@@ -639,8 +642,7 @@ iframe{
   height: 440px !important;
   margin-bottom:0px !important;
   position: relative;
-  background-image: linear-gradient(220deg, rgb(255, 255, 255) 0%, rgb(135, 213, 255) 53%);
-	z-index: -2;
+	background-image: linear-gradient(220deg, rgb(255, 0, 97) 0%, rgb(187, 82, 239) 53%);	z-index: -2;
 }
 
 .about {
@@ -659,10 +661,11 @@ iframe{
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	background-color: rgba(0, 0, 0, 0.51);
+	background-image: linear-gradient(220deg, rgb(0, 255, 205) 0%, rgb(187, 82, 239) 53%);
 	z-index: 1;
 	top: 0;
 	left: 0;
+	opacity:.5;
 }
 
 .sidebar-heading{
