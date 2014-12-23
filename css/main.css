@@ -27,6 +27,10 @@ a {
 	text-decoration: none !important;
 }
 
+#footer{
+	visibility:hidden;
+}
+
 .table {
 	text-align:left !important;
 }

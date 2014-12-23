@@ -95,9 +95,14 @@ function play() {
 // Gets audio file duration
 music.addEventListener("canplaythrough", function () {
 	duration = music.duration;  
+
+	var durationLabel = document.getElementById('duration');
+	var tracktime = Math.floor(music.duration).toString();
+	durationLabel.innerHTML = formatSecondsAsTime(tracktime);
+
 }, false);
 
-
+//formats audio time
 function formatSecondsAsTime(secs, format) {
   var hr  = Math.floor(secs / 3600);
   var min = Math.floor((secs - (hr * 3600))/60);
@@ -109,10 +114,10 @@ function formatSecondsAsTime(secs, format) {
   if (sec < 10){ 
     sec  = "0" + sec;
   }
-
   return min + ':' + sec;
 }
 
+//adds time to player
 function updateTrackTime(track){
   var currTimeDiv = document.getElementById('currentTime');
   var durationDiv = document.getElementById('duration');
@@ -124,11 +129,10 @@ function updateTrackTime(track){
   durationDiv.innerHTML = formatSecondsAsTime(duration);
 
   if (isNaN(duration)){
-    durationDiv.innerHTML = '02:00';
+    // durationDiv.innerHTML = '02:00';
     currTimeDiv.innerHTML = '00:00';
-  } 
-  else{
-    durationDiv.innerHTML = formatSecondsAsTime(duration);
+  }else{
+    // durationDiv.innerHTML = formatSecondsAsTime(duration);
   }
 }
 
