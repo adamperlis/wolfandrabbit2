@@ -30,7 +30,7 @@
             <ul class="nav navbar-nav nav-menu-items">
               <li><a href="#featured">Featured Work</a></li>
               <li><a href="#libaryContainer">Library</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#about">About</a></li>
             </ul>
           </div>
         </div><!--/.navbar-collapse -->
@@ -56,73 +56,90 @@
   <div class="row">
     <div class="jumbotron">
       <div class="row">
-        <a href="#libaryContainer" class="text-center button"><span>Library</span></a>
+        
         <div class="black-overlay"></div>
         <div class="col-md-12">
           <div class="col-lg-offset-5 col-md-offset-5 col-sm-offset-4 col-lg-2 col-md-2 col-sm-4 col-xs-12">
-            <img class="img-responsive animated fadeInUp" src="img/WolfRabbit_logo_vertical.svg"/>
+            <img id="logo" class="img-responsive animated fadeInUp" src="img/WolfRabbit_logo_vertical.svg"/>
           </div>
           <div class="col-md-5"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <a href="#libaryContainer" id="heroBtn" class="text-center button animated fadeInUp"><span>BROWSE LIBRARY</span></a>
         </div>
       </div>
     </div>
     
   </div>
 
-  <div class="row" id="featured">
+  <div class="row" id="featured" style="padding-bottom:110px;background:white">
     <div class="subheading text-center" style="padding:50px;background:white">FEATURED WORK</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="grid" data-toggle="modal" data-target="#Intro3">
+          <figure class="effect-romeo">
+           <img class="img-responsive" src="img/Intro-to-AdWorks-3.png"/>
+                <!-- Button trigger modal -->
+          </figure>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="grid" data-toggle="modal" data-target="#Blueprint">
+          <figure class="effect-romeo">
+            <img class="img-responsive" src="img/blueprint.png"/>
+              
+          </figure>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="grid">
+          <figure class="effect-romeo">
+           <img class="img-responsive" src="img/happy-holidays.png"/>
+        </figure>
+      </div>
+    </div>
   </div>
-
-  <div class="row">
-    <div class="col-md-4 no-padding">
-      <div class="grid" data-toggle="modal" data-target="#Intro3">
-        <figure class="effect-romeo">
-         <img class="img-responsive bigger" src="img/Intro-to-AdWorks-3.png"/>
-              <!-- Button trigger modal -->
-        </figure>
-      </div>
-    </div>
-    <div class="col-md-4 no-padding">
-      <div class="grid" data-toggle="modal" data-target="#Blueprint">
-        <figure class="effect-romeo">
-          <img class="img-responsive bigger" src="img/blueprint.png"/>
-            
-        </figure>
-      </div>
-    </div>
-    <div class="col-md-4 no-padding">
+  <div class="row" style="padding-top:10px">
+    <div class="col-md-4">
       <div class="grid">
         <figure class="effect-romeo">
-         <img class="img-responsive bigger" src="img/happy-holidays.png"/>
-            
-      </figure>
+          <img class="img-responsive" src="img/Intro-to-AdWorks-2.png"/>
+         
+        </figure>
+      </div>
     </div>
-  </div>
-  <div class="col-md-4 no-padding">
-    <div class="grid">
-      <figure class="effect-romeo">
-        <img class="img-responsive bigger" src="img/Intro-to-AdWorks-2.png"/>
-       
-      </figure>
+    <div class="col-md-4">
+      <div class="grid">
+        <figure class="effect-romeo">
+         <img class="img-responsive" src="img/Retail-video.png"/>
+               
+        </figure>
+      </div>
     </div>
-  </div>
-  <div class="col-md-4 no-padding">
-    <div class="grid">
-      <figure class="effect-romeo">
-       <img class="img-responsive bigger" src="img/Retail-video.png"/>
-             
-      </figure>
-    </div>
-  </div>
-  <div class="col-md-4 no-padding">
-    <div class="grid">
-      <figure class="effect-romeo">
-       <img class="img-responsive bigger" src="img/click-to-fill.png"/>
-            
-      </figure>
+    <div class="col-md-4">
+      <div class="grid">
+        <figure class="effect-romeo">
+         <img class="img-responsive" src="img/click-to-fill.png"/>
+              
+        </figure>
+      </div>
     </div>
   </div>
 </div>
+</div>  
+
+  <div class="bg-2 img-responsive"></div>
+  <div class="row" id="about">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">            
+        <p class="about heading text-center">Wolf & Rabbit is a Brooklyn, NY based creative audio studio. We compose and license music for commercials, film, corporate videos and other projects. Our talented team will work with you to create story driven music that evokes emotion and drives results.</p>
+      </div>
+    <div class="jumbotron jumbotron2">
+    </div>
+  </div>
+    
 
 <div id="libaryContainer" style="padding-top:50px;background:white">
   <div class="row">
@@ -392,12 +409,30 @@
 </div>
 </div>
 
-<div id="footer" class="hidden">
-    <nav class="navbar navbar-default navbar-fixed-bottom">
+<div id="footer" class="hidden"><!-- Audio player -->
+    <nav class="navbar navbar-default navbar-fixed-bottom" id="audioplayer">
         <div class="navbar-inner navbar-content-center">
-            <div class="col-md-12 text-center">
-              <p style="padding-top:17px"><i class="entypo-flash"></i> Made in <strong>Brooklyn</strong></p>
+            <audio id="music" preload="true" onloadedmetadata="this.duration" onloadstart='updateTrackTime(this);' ontimeupdate='updateTrackTime(this);'>
+              <source src="http://www.alexkatz.me/codepen/music/interlude.mp3">
+              <source src="http://www.alexkatz.me/codepen/music/interlude.ogg">
+            </audio>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 navbar-left">
+            <i class="entypo-play" id="pButton" class="play" onclick="play()"></i>
             </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8 player">
+              <p>Track Title 3<italic> -Artist</italic><br><small id="currentTime"></small><italic> of </italic><small id="duration"></small></p>
+              <div id="timeline">    
+                    <div id="playhead"></div>
+                    <div id="playbar"></div>
+              </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 navbar-right player">
+             <i class="entypo-basket" id="cart"></i>
+            </div>
+            </div>
+            <!-- <div class="col-md-12 text-center">
+              <p style="padding-top:17px"><i class="entypo-flash"></i> Made in <strong>Brooklyn</strong></p>
+            </div> -->
         </div>
     </nav>
 </div>
@@ -411,6 +446,7 @@
   <script src="js/parallax.js"></script>
   <script src="js/animated-nav.js"></script>
   <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/audio-player.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
@@ -424,7 +460,7 @@
 
    <script> //scrollTo script
     $(function(){
-      $(".navbar a").click(function(e){
+      $("a").click(function(e){
         e.preventDefault();
         $('html,body').scrollTo(this.hash,this.hash, 6000,{easing:'swing'});
       });

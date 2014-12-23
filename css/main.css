@@ -4,6 +4,7 @@
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
   font-style: normal !important;
+  font-weight: 400 !important;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
@@ -30,6 +31,9 @@ a {
 	text-align:left !important;
 }
 
+i {
+	font-style: normal !important;
+}
 
 body, h1, h2, h3, h4, p, ul, ol, .searchform label, .website, .tag {
     font-family: "Lucida Grande", Verdana, sans-serif;
@@ -63,8 +67,6 @@ a, a:before {
 
 .button{
 	display: inline-block;
-	margin-left: auto;   
-	margin-right: auto; 
 	color: white;
 	text-align: center;
 	font-size: .7em;
@@ -78,9 +80,9 @@ a, a:before {
 	border-radius: 2px;
 	-webkit-font-smoothing: antialiased;
 	transition:all .7s;
-	position:absolute;
 	z-index: 10000;
-
+	position: relative;
+	top: 470px;
 }
 
 .button span {
@@ -96,6 +98,26 @@ a, a:before {
 .button:hover{
 	background-color: #fff;
 	color:rgba(0,0,0,.5);
+}
+
+.modal-dialog {
+	margin: 230px auto !important;
+	z-index: 100000000000000;
+}
+
+.modal-backdrop.in {
+filter: alpha(opacity=75) !important;
+opacity: 0.75 !important;
+}
+
+#logo {
+	-webkit-animation-duration: 1s;
+  	-webkit-animation-delay: 0s;
+}
+
+#heroBtn {
+	-webkit-animation-duration: 2s;
+  	-webkit-animation-delay: .5s;
 }
 
 hr {
@@ -158,7 +180,14 @@ hr {
 }
 .tag:hover {
     background-color: #9d15e0;
+    color:white;
 }
+
+.tag:focus {
+    background-color: #9d15e0;
+    color:white;
+}
+
 .tag:hover:before {
     border-right-color: #9d15e0;
 }
@@ -283,7 +312,7 @@ border-color: transparent;
 .left-col {
 	background: rgb(246, 246, 246);
 	margin-top: -50px;
-	padding-bottom: 29%;
+	padding-bottom: 30%;
 }
 
 @media all and (min-width: 420px){
@@ -359,6 +388,157 @@ border-color: transparent;
 	color:black;
 }
 
+.tracks {
+	color: white;
+	font-size: 12px;
+	font-family: "Lucida Grande", Verdana, sans-serif;
+	left: 0;
+	position: relative;
+	top: 0;
+}
+
+#audioplayer{
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	z-index:10000000000000;
+}
+
+#pButton{
+	display: inline-block;
+	font-family: 'Entypo';
+	text-decoration: none;
+	speak: none;
+	border: none;
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	float:left;
+	outline:none;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	color: rgb(119, 119, 119);
+	font-size: 24px;
+	top: 0px;
+	position: absolute;
+	padding-left: 30px;
+	padding-right: 30px;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+	background: rgb(233, 233, 233);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+
+#pButton:hover{
+	color:white;
+	cursor: pointer;
+	background-color: rgb(187, 82, 239);
+}
+
+#pButton p {
+	top: 10px;
+	padding-left:20px;
+	position: relative;
+	color:black;
+}
+
+.play:before {
+	content: "\25B6";
+	font-style: normal;
+
+}
+
+.pause:before {
+	content: "";
+}
+
+
+#timeline{
+	width: 80%;
+	height: 20px;
+	background: rgba(0,0,0,.3);
+	position: relative;
+	top: -14px;
+	left: 15%;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+
+#playhead{
+	width: 18px;
+	height: 20px;
+	margin-top: 1px;
+	background-color: rgb(126, 30, 173);
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+
+#playbar{
+	padding-left:0px;
+	height: 100%;
+	background-color: #eb52ff;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzEwJyB2aWV3Qm94PScwIDAgNSAxMCc+Cgk8cGF0aCBkPSdNMCwwbDUsNWwtNSw1bS0xLC02bDEsMWwtMSwxTTQsLTFsNiw2bC02LDYnIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjYjYxZWM3JyBzdHJva2Utd2lkdGg9JzEuMTMnLz4KPC9zdmc+');
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-animation: slide 20s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  from{
+      background-position:0%;
+  }
+  to{
+      background-position:100%;
+  }
+}
+
+
+.player i{
+	color: rgb(119, 119, 119);
+	font-size: 24px;
+	top: 0px;
+	position: absolute;
+	padding-left: 30px;
+	padding-right: 30px;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+	background: rgb(233, 233, 233);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+
+.player i:hover{
+	color:white;
+	cursor: pointer;
+	background-color: rgb(187, 82, 239);
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+
+.player p {
+	top: 10px;
+	padding-left:20px;
+	position: relative;
+	color:black;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+
 #download {
 	font-size: 17px;
 	top: 8px;
@@ -366,6 +546,21 @@ border-color: transparent;
 	opacity:1;
 	-webkit-transition: all 1s;
     transition: all 1s;
+    -webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+
+#cart {
+	font-size: 17px;
+	padding-top: 16px;
+	padding-bottom: 40px;
+	opacity:1;
+	-webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
 }
 
 #download:hover {
@@ -374,7 +569,7 @@ border-color: transparent;
 
 .list {
 	left: -8px;
-	height: 837px;
+	height: auto;
 	overflow: hidden;
 }
 
@@ -399,6 +594,24 @@ iframe{
     transform: scale(1.25);
 }
 
+.bg-2{
+	background: url('../img/wolf-and-rabbit-bg.png') no-repeat center center;
+	width: 100%;
+	height: 780px;
+	position: fixed;
+	opacity: .25;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	display:none;
+	background-size: 100%;
+	background-position: 0 80px;
+	-ms-transform: scale(1.25); /* IE 9 */
+    -webkit-transform: scale(1.25); /* Chrome, Safari, Opera */
+    transform: scale(1.25);
+	background-color: linear-gradient(220deg, rgb(255, 255, 255) 0%, rgb(135, 213, 255) 53%);
+}
+
 .jumbotron {
   height: 780px;
   background-color: rgba(0,0,0,0) !important;
@@ -413,6 +626,26 @@ iframe{
   bottom:0;
   margin: 0 auto;
   padding-top:75%;
+  background-color: none !important;
+  z-index: 100000;
+  position: absolute
+}
+
+.jumbotron2 {
+  height: 440px !important;
+  margin-bottom:0px !important;
+  position: relative;
+  background-image: linear-gradient(220deg, rgb(255, 255, 255) 0%, rgb(135, 213, 255) 53%);
+	z-index: -2;
+}
+
+.about {
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin: 0 auto;
+  padding-top:12%;
   background-color: none !important;
   z-index: 100000;
   position: absolute
@@ -444,6 +677,16 @@ iframe{
 	letter-spacing: 2px;
 	font-weight: 700;
 	text-transform: uppercase;
+}
+
+.heading{
+	font-family: "Montserrat",Verdana,sans-serif;
+	font-size: 21px;
+	line-height: 2.2;
+	letter-spacing: 2px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color:white;
 }
 
 .nav-menu-items {
@@ -499,7 +742,8 @@ iframe{
 	display: block;
 	min-height: 100%;
 	max-width: 100%;
-	opacity: 0.8;
+	opacity: 1;
+	background:white;
 }
 
 .grid figure figcaption {
@@ -569,12 +813,13 @@ figure.effect-romeo img {
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(0,0,300px);
 	transform: translate3d(0,0,300px);
+	background:white;
 }
 
 figure.effect-romeo:hover img {
-	opacity: 0.6;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+	background:white;
 }
 
 figure.effect-romeo figcaption::before,
@@ -702,6 +947,14 @@ text-shadow: none;
 
 .navbar-nav>.active>a:focus{
 	color:black;
+}
+
+.navbar-left {
+	margin-left: -15px;
+}
+
+.navbar-right {
+	margin-right: -29px;
 }
 
 
