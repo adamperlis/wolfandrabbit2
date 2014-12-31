@@ -28,7 +28,7 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse" style="padding-top:11px">
             <ul class="nav navbar-nav nav-menu-items">
-              <li><a href="#featured">Featured Work</a></li>
+              <li id="featured-btn"><a href="#">Featured Work</a></li>
               <li><a href="#libaryContainer">Library</a></li>
               <li><a href="#about">About</a></li>
             </ul>
@@ -73,7 +73,7 @@
     </div>
     
   </div>
-
+  
   <div class="row" id="featured" style="padding-bottom:110px;background:white">
     <div class="subheading text-center" style="padding:50px;background:white">FEATURED WORK</div>
   <div class="container">
@@ -198,6 +198,7 @@
           <span>Electronic <i>75</i>
           </span></a>
         </li>
+
         <li><a class="tag" href="/type/fashion">
 
           <span>Ambient <i>97</i>
@@ -420,7 +421,7 @@
             <i class="entypo-play" id="pButton" class="play" onclick="play()"></i>
             </div>
             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8 player">
-              <p>Track Title 3<italic> -Artist</italic><br><small id="currentTime"></small><italic> of </italic><small id="duration"></small></p>
+              <p>Track Title 3<span> -Artist</span><br><small id="currentTime"></small><small> of </small><small id="duration"></small></p>
               <div id="timeline">    
                     <div id="playhead"></div>
                     <div id="playbar"></div>
@@ -447,6 +448,13 @@
   <script src="js/animated-nav.js"></script>
   <script src="js/jquery.scrollTo.js"></script>
   <script src="js/audio-player.js"></script>
+
+  <script>
+    $( "#featured-btn" ).click(function() {
+      $.scrollTo( '#featured', 500, {offset: {top:-50} });
+    });
+
+  </script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>

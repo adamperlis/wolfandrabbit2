@@ -18,7 +18,7 @@
 
 		$scrollTo.defaults = {
 			axis:'xy',
-			duration: 0,
+			duration: 500,
 			limit:true
 		};
 
